@@ -242,6 +242,7 @@ typedef int	(*setmode_op_t)(pcap_t *, int);
 typedef int	(*setmintocopy_op_t)(pcap_t *, int);
 #endif
 typedef void	(*cleanup_op_t)(pcap_t *);
+typedef int    (*vlan_tag_in_pkt_meta_op_t)(pcap_t *);
 
 struct pcap {
 #ifdef WIN32
@@ -325,6 +326,8 @@ struct pcap {
 #endif
 	cleanup_op_t cleanup_op;
 
+        /* is the vlan tag in packet metadata? */
+        vlan_tag_in_pkt_meta_op_t vlan_tag_in_pkt_meta_op;
 	/*
 	 * Placeholder for filter code if bpf not in kernel.
 	 */
