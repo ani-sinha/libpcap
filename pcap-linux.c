@@ -280,9 +280,9 @@ typedef int		socklen_t;
  * supporting BPF packet filtering
  * based on vlan tags that are present in the skb metadata
  */
-#define BPF_VLAN_KVER 2
-#define BPF_VLAN_KPATCHLEVEL 6
-#define BPF_VLAN_KSUBLEVEL 38
+#define BPF_VLAN_KVER 3
+#define BPF_VLAN_KPATCHLEVEL 8
+#define BPF_VLAN_KSUBLEVEL 0
 
 /* prototype for external function and methods */
 u_int	bpf_filter_linux(const struct bpf_insn *, const u_char *, u_int16_t, u_int, u_int);
